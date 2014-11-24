@@ -6,11 +6,20 @@ import cooperhewitt.unicode.names as names
 if __name__ == '__main__':
 
     source = sys.argv[1]
-    char = sys.argv[2]
+    input = sys.argv[2:]
 
-    char = char.decode('utf-8')
+    input = ' '.join(input)
+    input = input.decode('utf-8')
 
     ref = names.lookup(source)
-    name = ref.name(char)
 
-    print "%s is %s" % (char, name)
+    for char in input:
+
+        if char == ' ':
+            print char
+            continue
+
+        name = ref.name(char)
+        print name 
+
+    # print "%s is %s" % (char, name)

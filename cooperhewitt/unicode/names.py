@@ -20,11 +20,11 @@ if __name__ == '__main__':
     import sys
 
     source = sys.argv[1]
-    char = sys.argv[2]
+    input = sys.argv[2]
 
     char = char.decode('utf-8')
 
-    l = lookup(source)
-    name = l.name(char)
+    ref = names.lookup(source)
+    name = ref.name(char)
 
     print "%s is %s" % (char, name)
