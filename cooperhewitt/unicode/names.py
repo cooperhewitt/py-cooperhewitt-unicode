@@ -13,7 +13,7 @@ class lookup:
         id = ord(char)
         hex = "%04x" % id
 
-        return self.lookup[hex]
+        return self.lookup.get(hex, None)
 
 if __name__ == '__main__':
 

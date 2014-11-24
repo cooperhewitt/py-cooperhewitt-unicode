@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import sys
-import cooperhewitt.unicode.names
+import cooperhewitt.unicode.names as names
 
 if __name__ == '__main__':
 
