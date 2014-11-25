@@ -32,11 +32,12 @@ Display the Unicode name for one or more characters
 	/usr/local/bin/ucd-name ☈ 
 	THUNDERSTORM
 
-	/usr/local/bin/ucd-name Mr ☃ 
+	/usr/local/bin/ucd-name Mr ☃!
 	LATIN CAPITAL LETTER M
 	LATIN SMALL LETTER R
 	SPACE
 	SNOWMAN
+	EXCLAMATION MARK
 
 ### build-ucd-lookup
 
