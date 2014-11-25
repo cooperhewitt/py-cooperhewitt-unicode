@@ -47,4 +47,5 @@ Fetch UCD data and export as a JSON dictionary mapping hex value to Unicode name
 
 ## See also
 
+* https://github.com/cooperhewitt/plumbing-ucd-server
 * http://unicode.org/Public/UCD/latest/ucd/
