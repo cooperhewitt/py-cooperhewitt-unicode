@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import json
+import logging
 
 class lookup:
 
@@ -11,8 +12,9 @@ class lookup:
 
     def name(self, char):        
         id = ord(char)
-        hex = "%04x" % id
+        hex = "%04X" % id
 
+        logging.debug("char: %s id: %s hex: %s" % (char, id, hex))
         return self.lookup.get(hex, None)
 
 if __name__ == '__main__':
