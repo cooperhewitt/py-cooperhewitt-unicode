@@ -1,19 +1,48 @@
 # py-cooperhewitt-unicode
 
-This is a work in progress and almost certainly has bugs, still.
+Tools for working with Unicode data
 
 ## Example
 
-	./scripts/build-ucd-lookup.py > data/lookup.json
+### cooperhewitt.unicode.names
 
-	./scripts/lookup-ucd-name.py data/lookup.json ☃
-	☃ is SNOWMAN
+    import cooperhewitt.unicode.names as names
+    import sys
 
-	./scripts/lookup-ucd-name.py data/lookup.json ☈ 
-	☈ is THUNDERSTORM
+    input = sys.argv[1:]
+    input = " ".join(input)
 
-	./scripts/lookup-ucd-name.py data/lookup.json ஔ
-	ஔ  is TAMIL LETTER AU
+    input = input.decode('utf-8')
+
+    ref = names.lookup()
+
+    for char in input:
+        name = ref.name(char)
+        print "%s is %s" % (char, name)
+
+## Scripts
+
+### build-ucd-lookup
+
+Fetch UCD data and export as a JSON dictionary mapping hex value to Unicode name
+
+	./scripts/build-ucd-lookup > data/lookup.json
+
+### ucd-name
+
+Display the Unicode name for one or more characters
+
+	/usr/local/bin/ucd-name ☃
+	SNOWMAN
+
+	/usr/local/bin/ucd-name ☈ 
+	THUNDERSTORM
+
+	/usr/local/bin/ucd-name Mr ☃ 
+	LATIN CAPITAL LETTER M
+	LATIN SMALL LETTER R
+	SPACE
+	SNOWMAN
 
 ## See also
 
