@@ -22,12 +22,6 @@ Tools for working with Unicode data
 
 ## Scripts
 
-### build-ucd-lookup
-
-Fetch UCD data and export as a JSON dictionary mapping hex value to Unicode name
-
-	./scripts/build-ucd-lookup > data/lookup.json
-
 ### ucd-name
 
 Display the Unicode name for one or more characters
@@ -43,6 +37,12 @@ Display the Unicode name for one or more characters
 	LATIN SMALL LETTER R
 	SPACE
 	SNOWMAN
+
+### build-ucd-lookup
+
+Fetch UCD data and export as a JSON dictionary mapping hex value to Unicode name
+
+	/usr/local/bin/build-ucd-lookup > data/lookup.json
 
 ## See also
 
